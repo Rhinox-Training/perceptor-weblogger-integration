@@ -58,3 +58,5 @@ sysinfo.txt
 # Crashlytics generated file
 crashlytics-build.properties
 
+perceptor-webview-integration/Assets/Samples/
+perceptor-webview-integration/Assets/Samples.meta

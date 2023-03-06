@@ -1,0 +1,24 @@
+{
+    "name": "com.rhinox.open.perceptor.debugmaster",
+    "references": [
+        "GUID:d06f234cedf03a546807d093bc1d736b",
+        "GUID:cacc866837634ee43b789e23dc71d920"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [
+        "USING_PERCEPTOR"
+    ],
+    "versionDefines": [
+        {
+            "name": "com.rhinox.open.perceptor",
+            "expression": "0.2",
+            "define": "USING_PERCEPTOR"
+        }
+    ],
+    "noEngineReferences": false
+}
