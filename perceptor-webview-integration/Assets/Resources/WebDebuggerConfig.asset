@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 87ee23d662735a340bfefece599d72d5, type: 3}
   m_Name: WebDebuggerConfig
   m_EditorClassIdentifier: 
-  ApiURL: http://localhost/webdebugmaster/
-  WebURL: http://localhost:8080
+  ApiURL: http://dev.rhinox.be:43200/
+  WebURL: http://dev.rhinox.be:43200/perceptor-weblogger-integration/dist/index.html

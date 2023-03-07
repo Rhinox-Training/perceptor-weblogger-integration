@@ -146,7 +146,6 @@ namespace Rhinox.Perceptor
                 Debug.Log(_apiData);
                 var projects = JsonHelper.FromJson<Project>("{\"Items\":" + _apiData + "}");
 
-
                 bool projectExist = false;
 
                 for (int i = 0; i < projects.Length; i++)
@@ -155,20 +154,30 @@ namespace Rhinox.Perceptor
                     {
                         _project = projects[i];
                         _projectID = projects[i].id;
+                        _session.projectId = _project.id;
+
                         projectExist = true;
                     }
                 }
 
                 if (!projectExist)
                 {
-                    _project.id = projects.Length;
-                    _projectID = _project.id;
+                    if (projects.Length == 0)
+                    {
+                        _project.id = 1;
+                    }
+                    else
+                    {
+                        _project.id = projects.Length;
 
+                    }
+                    _projectID = _project.id;
                     CreateProj(_project);
                 }
+                _session.projectId = _project.id;
 
                 _session.timestamp = System.DateTime.Now.ToString();
-                _session.projectId = _project.id;
+                
 
                 var coroutineSessions = new ManagedCoroutine(getSessions(WebDebuggerConfig.Instance.ApiURL));
                 coroutineSessions.OnFinished += delegate
